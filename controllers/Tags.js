@@ -39,12 +39,12 @@ exports.createTag = async (req, res) => {
 
 // get all tags ka handler function
 
-exports.getAllTags = async (req, res) => {
+exports.showAllTags = async (req, res) => {
     try {
         // get all tags from db
         const allTags = await Tag.find({},{name:true,description:true});
         // return response
-        return res.status(200).json({
+         res.status(200).json({
             success: true,
             message: 'ALL tags return successfully',
             allTags,

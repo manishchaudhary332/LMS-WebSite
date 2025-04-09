@@ -8,7 +8,7 @@ const OTPSchema = new mongoose.connect({
         
     },
     otp:{
-        type:String,
+        type:String, 
         required:true
     },
     createdAt:{
